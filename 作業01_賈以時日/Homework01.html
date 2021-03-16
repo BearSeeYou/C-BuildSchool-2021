@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial,
+                "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", serif, sans-serif;
+        }
+
+        body {
+            background-color: rgb(247, 248, 248);
+        }
+
+        .header {
+            width: 1140px;
+            padding: 30px;
+            margin: auto;
+            /* background-color: #ccc; */
+            text-align: center;
+            border-bottom: 1px solid rgb(180, 177, 177);
+        }
+
+        .header img {
+            width: 380px;
+        }
+
+        nav {
+            width: 1200px;
+            font-size: 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgb(180, 177, 177);
+        }
+
+        nav a {
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            color: #696969;
+            width: 170px;
+            margin: 0 15px;
+            padding: 30px 0;
+        }
+
+        .rowPic {
+            width: 1200px;
+            margin: 1px auto;
+        }
+
+        .product_2col {
+            width: 1200px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product_2col .item {
+            width: 570px;
+            margin: 15px;
+        }
+
+        .product_2col .item .itemPic {
+            width: 570px;
+        }
+
+        .product_2col .item img {
+            width: 100%;
+        }
+
+        .item .productName {
+            color: #696969;
+        }
+
+        .item p {
+            color: #888686;
+            font-size: 14px;
+            margin: 4px 0;
+            ;
+        }
+
+        .item .beforePrice {
+            text-decoration: line-through;
+        }
+
+        .product_1col {
+            width: 1200px;
+            margin: 50px auto;
+        }
+
+        .product_1col .itemPic {
+            width: 1200px;
+        }
+
+        .product_1col .itemPic img {
+            width: 100%;
+        }
+
+        .product_3col {
+            width: 1200px;
+            display: flex;
+            margin: 50px auto;
+        }
+
+        .product_3col .item {
+            width: 370px;
+            margin: 15px;
+        }
+
+        .product_3col .itemPic {
+            width: 370px;
+        }
+
+        .product_3col .itemPic img {
+            width: 100%;
+        }
+
+        .video_2col {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .video_2col .itemVideo {
+            width: 540px;
+            margin: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .itemVideo img {
+            width: 100%;
+        }
+
+        .video_3col {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .video_3col .itemVideo {
+            width: 340px;
+            margin: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .find_us {
+            width: 1200px;
+            margin: 60px auto 30px;
+            display: flex;
+        }
+
+        .find_us .item {
+            /* width: 270px;
+            margin: 15px; */
+            width: 300px;
+        }
+
+        .find_us .item img {
+            width: 100%;
+        }
+
+        .footer {
+            width: 1200px;
+            margin: 0 auto 100px;
+            text-align: center;
+        }
+
+        .footer a {
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            color: #696969;
+            padding: 0 10px 0 0;
+            display: inline-block;
+            position: relative;
+        }
+
+        .footer span {
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            color: #696969;
+            padding: 0 10px 0 0;
+        }
+
+        .footer a::after {
+            content: "|";
+            color: #696969;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="">
+            <img src="/賈以食日 CHIA YI SHI RI_files/x140.webp" alt="">
+        </a>
+    </div>
+
+    <nav>
+        <a href="#">食我-ABOUT US</a>
+        <a href="#">食麵-NOODLES</a>
+        <a href="#">食事-EVENT</a>
+        <a href="#">食品味-GOOD SENSE</a>
+        <a href="#">食影音-VIDEOS</a>
+        <a href="#">國際專區-OVERSEAS</a>
+    </nav>
+
+    <div class="rowPic">
+        <img src="/賈以食日 CHIA YI SHI RI_files/1200x.webp" alt="新品上市">
+    </div>
+
+    <div class="product_2col">
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5fbc6abf7b95df00172a7cfb/800x.webp?source_format=jpg"
+                    alt="賈以食日-拌雙粉 醋香豆瓣（1袋/3入）">
+            </div>
+            <p class="productName">賈以食日-拌雙粉 醋香豆瓣（1袋/3入）</p>
+            <p class="beforePrice">NT$249</p>
+            <p class="afterPrice">NT$230</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5fbcdb4eb492d1003ec49595/800x.webp?source_format=jpg"
+                    alt="賈以食日-拌雙粉 醋香豆瓣（16袋/48入）">
+            </div>
+            <p class="productName">賈以食日-拌雙粉 醋香豆瓣（16袋/48入）</p>
+            <p class="beforePrice">NT$3,984</p>
+            <p class="afterPrice">NT$3,580</p>
+        </div>
+    </div>
+
+    <div class="product_1col">
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5f86c4a329897d003b5ec968/1800x.webp?source_format=jpg"
+                    alt="賈以食日-角落小夥伴 寶貝麵三入綜合提袋組">
+            </div>
+            <p class="productName">賈以食日-角落小夥伴 寶貝麵三入綜合提袋組</p>
+            <p class="beforePrice">NT$530</p>
+            <p class="afterPrice">NT$499</p>
+        </div>
+    </div>
+
+    <div class="product_3col">
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5f7c4bf42bbade00177dc4e0/600x.webp?source_format=jpg"
+                    alt="賈以食日-角落小夥伴 寶貝麵 (經典原味)">
+            </div>
+            <p class="productName">賈以食日-角落小夥伴 寶貝麵 (經典原味)</p>
+            <p class="afterPrice">NT$159</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5f7c4c3a76519b0023bd98bc/600x.webp?source_format=jpg"
+                    alt="賈以食日-角落小夥伴 寶貝麵 (綜合蔬菜)">
+            </div>
+            <p class="productName">賈以食日-角落小夥伴 寶貝麵 (綜合蔬菜)</p>
+            <p class="afterPrice">NT$159</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5f7c4cc25fb5be0038ff3c84/600x.webp?source_format=jpg"
+                    alt="賈以食日-角落小夥伴 寶貝麵 (南瓜地瓜)">
+            </div>
+            <p class="productName">賈以食日-角落小夥伴 寶貝麵 (南瓜地瓜)</p>
+            <p p class="afterPrice">NT$159</p>
+        </div>
+    </div>
+
+    <div class="product_2col">
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5f45d0c623ec9a002dc42b2a/800x.webp?source_format=jpg"
+                    alt="賈以食日-干貝鍋燒意麵">
+            </div>
+            <p class="productName">賈以食日-干貝鍋燒意麵</p>
+            <p class="beforePrice">NT$150</p>
+            <p class="afterPrice">NT$138</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5f45d9d2e1b26d004eb5390b/800x.webp?source_format=jpg"
+                    alt="賈以食日-干貝鍋燒意麵（1箱/16盒）">
+            </div>
+            <p class="productName">賈以食日-干貝鍋燒意麵（1箱/16盒）</p>
+            <p class="beforePrice">NT$2400</p>
+            <p class="afterPrice">NT$2080</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5ee3423476944c75cbd8789b/800x.webp?source_format=jpg"
+                    alt="賈以食日-泰式酸辣粉">
+            </div>
+            <p class="productName">賈以食日-泰式酸辣粉</p>
+            <p class="beforePrice">NT$150</p>
+            <p class="afterPrice">NT$138</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5ee347c77c3ec70042f11ddb/800x.webp?source_format=jpg"
+                    alt="賈以食日-泰式酸辣粉（1箱/16盒）">
+            </div>
+            <p class="productName">賈以食日-泰式酸辣粉（1箱/16盒）</p>
+            <p class="beforePrice">NT$2400</p>
+            <p class="afterPrice">NT$2080</p>
+        </div>
+    </div>
+
+    <div class="rowPic">
+        <img src="/賈以食日 CHIA YI SHI RI_files/1200x(1).webp" alt="精選商品">
+    </div>
+
+    <div class="product_3col">
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5c2c50fab05cd6001228ece0/600x.webp?source_format=jpg"
+                    alt="賈以食日-麻花麵 (1袋/4入)">
+            </div>
+            <p class="productName">賈以食日-麻花麵 (1袋/4入)</p>
+            <p class="afterPrice">NT$268</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5c2c73dd9915ef000f2bfe9f/600x.webp?source_format=jpg"
+                    alt="賈以食日-燒椒麵 (1袋/4入)">
+            </div>
+            <p class="productName">賈以食日-燒椒麵 (1袋/4入)</p>
+            <p class="afterPrice">NT$268</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5d98d21b75c73800380a4af8/600x.webp?source_format=jpg"
+                    alt="賈以食日-麻薑麵 (1袋/4入)">
+            </div>
+            <p class="productName">賈以食日-麻薑麵 (1袋/4入)</p>
+            <p p class="afterPrice">NT$268</p>
+        </div>
+    </div>
+
+    <div class="product_2col">
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5d70f8b566547b00141b2faa/800x.webp?source_format=JPEG"
+                    alt="賈以食日-麻辣鴨血冬粉">
+            </div>
+            <p class="productName">賈以食日-麻辣鴨血冬粉</p>
+            <p class="afterPrice">NT$159</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5d7ef39b37ba100039815680/800x.webp?source_format=jpg"
+                    alt="賈以食日-麻辣鴨血冬粉（1箱/20盒）">
+            </div>
+            <p class="productName">賈以食日-麻辣鴨血冬粉（1箱/20盒）</p>
+            <p class="afterPrice">NT$3180</p>
+        </div>
+        <div class="item">
+            <div class="itemPic">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5fb610c0935b170032199d5d/800x.webp?source_format=jpg"
+                    alt="賈以食日-雪莓餅 (期間限定，售完為止)">
+            </div>
+            <p class="productName">賈以食日-雪莓餅 (期間限定，售完為止)</p>
+            <p class="beforePrice">NT$250</p>
+            <p class="afterPrice">NT$230</p>
+        </div>
+    </div>
+
+    <div class="rowPic">
+        <img src="/賈以食日 CHIA YI SHI RI_files/1200x(2).webp" alt="限時優惠">
+    </div>
+
+    <div class="product_1col">
+        <div class="item">
+            <div class="itemPic" style="opacity: 0.6;position: relative;height: 1200px;">
+                <img src="https://shoplineimg.com/5b4461529a76f081a2000629/5ff3e21eb0eeae00355abcb8/1800x.webp?source_format=jpg"
+                    alt="賈以食日-2021 HAPPY 牛 YEAR 福箱">
+                <span
+                    style="background-color: rgb(10, 10, 10);color: #fff;padding: 5px;border-radius: 10%;position: absolute;bottom: 0;right: 0;">販售結束</span>
+            </div>
+
+            <p class="productName">賈以食日-2021 HAPPY 牛 YEAR 福箱</p>
+            <p class="afterPrice">NT$999</p>
+        </div>
+    </div>
+
+    <div class="video_2col">
+        <div class="itemVideo">
+            <a href="https://www.youtube.com/watch?v=MbNDSjRsfRQ" target="_blank">
+                <img src="/賈以食日 CHIA YI SHI RI_files/video_3kids.PNG" alt="賈以食日-角落小夥伴寶貝麵">
+            </a>
+            <p class="videoName">賈以食日-角落小夥伴寶貝麵</p>
+        </div>
+        <div class="itemVideo">
+            <a href="https://www.youtube.com/watch?v=Tso0oDimXtQ" target="_blank">
+                <img src="/賈以食日 CHIA YI SHI RI_files/thai.PNG" alt="賈以食日-泰式酸辣粉精神領袖Q&A">
+            </a>
+            <p class="videoName">賈以食日-泰式酸辣粉精神領袖Q&A</p>
+
+        </div>
+    </div>
+    <div class="video_3col">
+        <div class="itemVideo">
+            <a href="https://www.youtube.com/watch?v=MbNDSjRsfRQ" target="_blank">
+                <img src="/賈以食日 CHIA YI SHI RI_files/ad_trouble.PNG" alt="賈以食日形象廣告三部曲/麻煩篇">
+            </a>
+            <p class="videoName">賈以食日形象廣告三部曲/麻煩篇</p>
+        </div>
+        <div class="itemVideo">
+            <a href="https://www.youtube.com/watch?v=9kcbL-J5TSU" target="_blank">
+                <img src="/賈以食日 CHIA YI SHI RI_files/ad_draw.PNG" alt="賈以食日形象廣告三部曲/作畫篇">
+            </a>
+            <p class="videoName">賈以食日形象廣告三部曲/作畫篇</p>
+
+        </div>
+        <div class="itemVideo">
+            <a href="https://www.youtube.com/watch?v=-LxiDnc-4Eo" target="_blank">
+                <img src="/賈以食日 CHIA YI SHI RI_files/ad_multi.PNG" alt="賈以食日形象廣告三部曲/分身篇">
+            </a>
+            <p class="videoName">賈以食日形象廣告三部曲/分身篇</p>
+
+        </div>
+    </div>
+
+    <div class="find_us">
+        <div class="item">
+            <a href="https://www.facebook.com/chiaselect/" target="_blank">
+                <img src="賈以食日 CHIA YI SHI RI_files/400x(1).webp" alt="賈以時日Facebook">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://www.instagram.com/chiaselect.tw/" target="_blank">
+                <img src="賈以食日 CHIA YI SHI RI_files/400x(2).webp" alt="賈以時日Instagram">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://line.me/R/ti/p/%40hkt1728y" target="_blank">
+                <img src="賈以食日 CHIA YI SHI RI_files/400x(3).webp" alt="賈以時日Line">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://www.saucelabinfo.com" target="_blank">
+                <img src="賈以食日 CHIA YI SHI RI_files/400x(4).webp" alt="合作夥伴">
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.chiaselect.com/pages/privacypolicy" target="_self">隱私權聲明</a>
+        <a href="https://www.chiaselect.com/pages/terms" target="_self">服務條款</a>
+        <span>2018 &copy; 賈以食日 拾躍創意國際有限公司 02-2579-2323</span>
+    </div>
+
+</body>
+
+</html>
