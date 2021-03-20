@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prata">
+
+    <!--共用的標題樣式-->
+    <style>
+        .title.twoColor h2 {
+            font-size: 45px;
+            font-weight: 400;
+            color: #42474c;
+        }
+
+        .title.twoColor span {
+            color: #c2b697;
+            font-weight: 400;
+        }
+    </style>
+    <!--Banner（大圖），menu（導覽列），header（大標題，3個區塊） -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            position: relative;
+            height: 670px;
+        }
+
+        .bannerPic {
+            width: 100%;
+            height: 100%
+        }
+
+        .menu {
+            width: 100%;
+            text-align: center;
+            background-color: rgb(2, 1, 1, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .menu h1 {
+            margin: 30px auto;
+            font-size: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            color: rgb(244, 248, 225);
+            display: inline-block;
+            padding: 0 25px 30px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            color: #fff;
+        }
+
+        .header h3,
+        .header p {
+            font-weight: 300;
+            font-family: Montserrat, Lato, sans-serif;
+        }
+
+        .header .title {
+            position: absolute;
+            top: 33%;
+            left: 20%;
+            margin-left: 0;
+        }
+
+        .header .title h1 {
+            font-size: 110px;
+            font-family: Prata, sans-serif;
+            font-weight: 400;
+        }
+
+        .header .title h2 {
+            font-size: 18px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 400;
+        }
+
+        .header .title p {
+            font-size: 12px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 400;
+            padding-top: 50px;
+        }
+
+        .header .title span {
+            font-size: 20px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 400;
+        }
+
+        .header .item-group {
+            display: flex;
+            position: absolute;
+            top: 70%;
+            left: 10%;
+            right: 10%;
+            width: 80%;
+        }
+
+        .header .item {
+            width: 28%;
+            margin: auto;
+            padding-top: 28px;
+            border-top: 2px solid rgba(255, 248, 248, 0);
+        }
+
+        .header .item:hover {
+            border-top: 2px solid rgb(233, 214, 179);
+        }
+
+        .header .item-title {
+            margin-bottom: 10px;
+            line-height: 30px;
+            display: flex;
+        }
+
+        .header i {
+            padding: 0 10px 0 0;
+            font-size: 30px;
+            color: rgb(233, 214, 179);
+        }
+
+        .header .item p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+    </style>
+    <!--Looking Business Plan 簡介區 內文要分2col -->
+    <style>
+        .introduce {
+            width: 100%;
+            margin: 80px 0;
+            display: flex;
+            /* background-color: #ffa; */
+        }
+
+        .introduce .wrap {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        /*寬度佔320 */
+        .introduce .title {
+            width: 220px;
+            padding: 0px 70px 0px 30px;
+            font-size: 20px;
+            font-family: Prata, sans-serif;
+            line-height: 1.7;
+            color: #42474c;
+            /* border: 1px solid #000; */
+
+        }
+
+        /*寬度佔800 */
+        .introduce .text {
+            width: 768px;
+            margin: auto;
+            padding-left: 50px;
+            font-size: 18px;
+            font-family: Montserrat, sans-serif;
+            color: #42474c;
+            line-height: 1.5;
+            column-count: 2;
+            column-gap: 60px;
+            border-left: 2px solid rgb(211, 209, 208);
+        }
+
+        .introduce .text::first-letter {
+            font-family: Prata, sans-serif;
+            font-size: 40px;
+            color: rgb(196, 166, 140);
+            float: left;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+    <!--Unleash... 普通褐色區塊  -->
+    <style>
+        .Unleash {
+            width: 100%;
+            background-color: #c2b697;
+            color: #fff;
+        }
+
+        .Unleash .wrap {
+            width: 1150px;
+            margin: auto;
+            padding: 80px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Unleash .title h2 {
+            font-size: 45px;
+            font-weight: 400;
+            padding-bottom: 10px;
+        }
+
+        .Unleash .title p {
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+        }
+
+        .Unleash .link {
+            font-family: Lato, sans-serif;
+            font-size: 12px;
+            font-weight: bolder;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 20px 40px;
+            transition: all 0.3s;
+        }
+
+        .Unleash a:hover,
+        .Unleash .link:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .Unleash a {
+            color: #42474c;
+            text-decoration: none;
+        }
+    </style>
+    <!-- Why Traders Choose Us 手機區 標題部分 -->
+    <style>
+        .traders {
+            width: 800px;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        .traders h2 {
+            padding-bottom: 25px;
+        }
+
+        .traders p {
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+    </style>
+    <!-- Why Traders Choose Us 手機區 內容部分-->
+    <style>
+        .phoneArea {
+            width: 1200px;
+            margin: 0 auto 100px;
+            display: flex;
+        }
+
+        .phoneArea:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left .item {
+            display: flex;
+            flex-direction: row-reverse;
+            text-align: right;
+            margin-top: 100px;
+        }
+
+        .right .item {
+            display: flex;
+            margin-top: 100px;
+        }
+
+        .middle {
+            margin: 0 50px;
+        }
+
+        .phoneArea .icon {
+            background-color: #c2b697;
+            text-align: center;
+            padding: 20px;
+            margin: 0 15px;
+            border-radius: 50%;
+        }
+
+        .phoneArea i {
+            display: block;
+            font-size: 35px;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+        }
+
+        .phoneArea .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .phoneArea h3 {
+            color: #c2b697;
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        .phoneArea p {
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+    </style>
+    <!-- 數據區，有4個大icon，主要講完成多少多少東西 -->
+    <style>
+        .record {
+            background-image: url(/asset/asset\ 50.jpeg);
+            background-size: cover;
+            background-attachment: scroll;
+        }
+
+        .record .bgColor {
+            background-color: rgba(48, 48, 49, 0.7);
+        }
+
+        .record .wrap {
+            width: 100%;
+            padding: 100px 80px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .record .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 80px;
+        }
+
+        .record i {
+            font-size: 50px;
+            padding-bottom: 30px;
+        }
+
+        .record p {
+            font-size: 60px;
+            font-family: Prata, sans-serif;
+        }
+
+        .record h4 {
+            font-size: 14px;
+            font-family: Montserrat, sans-serif;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            margin: auto;
+            width: 120px;
+        }
+    </style>
+    <!--What We Are Good At 進度條區 -->
+    <style>
+        .strength {
+            width: 1200px;
+            margin: 100px auto;
+        }
+
+        .strength h2 {
+            font-family: Prata, sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: #42474c;
+            padding-bottom: 20px;
+        }
+
+        .strength span {
+            color: #c2b697;
+            font-weight: 400;
+        }
+
+        .strength .area {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list {
+            width: 50%;
+        }
+
+        .list p {
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .list ul {
+            font-family: Lato, sans-serif;
+            font-size: 18px;
+            color: #42474c;
+            line-height: 2.5;
+            text-decoration: bolder;
+            padding-left: 20px;
+        }
+
+        .strength .item-group {
+            width: 45%;
+        }
+
+        .strength .item {
+            margin-bottom: 40px;
+        }
+
+        .strength .item .title {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .strength .item span {
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            color: #42474c;
+        }
+
+        .progressBar * {
+            height: 7px;
+            border-radius: 5px;
+        }
+
+        .progressBar .bottom {
+            width: 100%;
+            background-color: rgb(236, 235, 234);
+        }
+
+        .progressBar .top {
+            background-color: #c2b697;
+        }
+
+        .top.p87 {
+            width: 87%;
+        }
+
+        .top.p75 {
+            width: 75%;
+        }
+
+        .top.p63 {
+            width: 63%;
+        }
+
+        .top.p50 {
+            width: 50%;
+        }
+    </style>
+    <!--Our Latest Project 下方有圓形動畫-->
+    <style>
+        .latestProj {
+            /* padding: 100px 0;
+             */
+            height: 400px;
+            text-align: center;
+            background-color: rgba(238, 238, 232, 0.616);
+        }
+
+        .latestProj .title {
+            padding-top: 100px;
+            margin-bottom: 40px;
+        }
+
+        .latestProj a {
+            color: rgba(66, 66, 66, 0.842);
+            display: inline-block;
+            padding: 0 25px 30px;
+        }
+
+        .latestProj a:hover {
+            color: #c2b697;
+            text-decoration: none;
+        }
+
+        .wrapCircle {
+            margin: auto;
+        }
+
+        .bigCircle {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            animation: bigCircle 3s infinite linear;
+        }
+
+        .smallCircle {
+            width: 25px;
+            height: 25px;
+            margin: 75px;
+            border-radius: 50%;
+            background-color: transparent;
+            animation: smallCircle 3s infinite linear;
+        }
+
+        @keyframes bigCircle {
+            20% {
+                background-color: #e9dbb8;
+                width: 50px;
+                height: 50px;
+            }
+
+            50% {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @keyframes smallCircle {
+            20% {
+                background-color: #c0b595;
+                width: 50px;
+                height: 50px;
+                margin: 0px;
+            }
+
+            50% {
+                background-color: transparent;
+                width: 25px;
+                height: 25px;
+                margin: 0px;
+            }
+        }
+    </style>
+    <!-- Clients Testimonials 下方有3個點點 -->
+    <style>
+        .client {
+            width: 100%;
+            height: 400px;
+            text-align: center;
+        }
+
+        .client .title {
+            padding: 100px 0;
+        }
+
+        .dot {
+            display: inline-block;
+            padding: 5px;
+            margin-left: 5px;
+            background-color: rgb(184, 181, 181);
+            border-radius: 50%;
+        }
+
+        .dot:hover {
+            background-color: #c2b697;
+            animation: dot 0.5s alternate forwards;
+        }
+
+        @keyframes dot {
+            0% {
+                background-color: gray;
+            }
+
+            100% {
+                background-color: #c2b697;
+            }
+        }
+    </style>
+    <!--AboutUs 工作者聯絡區-->
+    <style>
+        .aboutUs {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .leader {
+            width: 50%;
+            box-sizing: border-box;
+            background-color: #42474c;
+            padding-top: 70px;
+            color: #fff;
+        }
+
+        .people {
+            padding-bottom: 50px;
+            padding-left: 23%;
+            display: flex;
+        }
+
+        .people .pic {
+            padding-right: 45px;
+        }
+
+        .people .contact {
+            padding-top: 15px;
+        }
+
+        .people .item {
+            display: flex;
+        }
+
+        .people h3 {
+            font-family: Prata, sans-serif;
+            font-size: 30px;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+
+        .people h4 {
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            padding-bottom: 10px;
+        }
+
+        .people h5 {
+            font-size: 0;
+        }
+
+        .people h5 i {
+            color: rgb(120, 121, 122);
+            font-size: 15px;
+            line-height: 1.5;
+            padding-right: 15px;
+            display: inline-block;
+        }
+
+        .people .item p {
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <!--AboutUs  OurOffices地址&營業時間-->
+    <style>
+        .office {
+            width: 50%;
+            box-sizing: border-box;
+            background-color: rgba(238, 238, 232, 0.616);
+            color: #42474c;
+            padding-top: 70px;
+            padding-left: 7%;
+        }
+
+        .office .title {
+            margin-bottom: 60px;
+        }
+
+        .office h3 {
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .office h4 {
+            font-size: 0;
+        }
+
+        .office .item-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .office .item {
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+            width: 45%;
+            padding-bottom: 40px;
+        }
+
+        .office h6 {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .office a {
+            text-decoration: none;
+            color: #c2b697;
+        }
+
+        .office a:hover {
+            text-decoration: none;
+            color: #8d8571;
+        }
+    </style>
+    <!--Stay In Touch 輸入email訂閱-->
+    <style>
+        .subscribe {
+            width: 100%;
+            background-color: #c2b697;
+            color: #fff;
+            font-size: 0px;
+        }
+
+        .subscribe .wrap {
+            width: 1200px;
+            margin: auto;
+            padding: 70px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .subscribe .title {
+            width: 40%;
+        }
+
+        .subscribe .title h2 {
+            font-size: 45px;
+            font-weight: 400;
+        }
+
+        .emailSub {
+            width: 60%;
+        }
+
+        .emailSub input {
+            width: 70%;
+            height: 50px;
+            background-color: #b6a889;
+            border: none;
+            border-radius: 3px 0 0 3px;
+            padding-left: 20px;
+            color: #fff;
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            outline: none;
+        }
+
+        .emailSub input::placeholder {
+            color: #fff;
+        }
+
+        .emailSub button {
+            height: 50px;
+            padding: 0 40px;
+            background-color: rgb(250, 246, 246);
+            border: none;
+            border-radius: 0 3px 3px 0;
+            font-family: Lato, sans-serif;
+            font-size: 12px;
+            font-weight: bolder;
+            color: #42474c;
+            letter-spacing: 1px;
+            outline: none;
+        }
+
+        .emailSub button:hover {
+            background-color: rgb(207, 207, 207);
+        }
+    </style>
+    <!-- footer部分 -->
+    <style>
+        footer {
+            width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            color: #42474c;
+            line-height: 2.5;
+        }
+
+        footer p {
+            font-family: Montserrat, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 2.5;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #c2b697;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+            color: #8d8571;
+        }
+
+        footer span {
+            font-family: Montserrat, sans-serif;
+            font-size: 12px;
+        }
+
+        footer .icon-group {
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+        }
+
+        footer .icon {
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        footer .icon i {
+            background-color: #c2b697;
+            border-radius: 50%;
+            font-size: 15px;
+            color: #fff;
+            padding: 10px;
+            transition: all 0.3s ease-out;
+        }
+
+        /* 因為fb icon比較細長，所以左右padding要加寬，背後的圓形才會比較正 */
+        .fab.fa-facebook-f {
+            padding: 10px 13px;
+        }
+
+        footer .icon i:hover {
+            background-color: #42474c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="asset 48.jpeg" alt="bannerImage" class="bannerPic">
+
+        <div class="menu">
+            <h1>IMPERION Homepage
+                <img src="asset 0.png" alt="Homepage" title="Homepage">
+            </h1>
+            <nav>
+                <a href="https://ld-wp.template-help.com/wordpress_imperion/finance_v1/" target="_blank">HOME</a>
+                <a href="javascript:;" target="_blank">PAGES</a>
+                <a href="javascript:;" target="_blank">FEATURES</a>
+                <a href="https://ld-wp.template-help.com/wordpress_imperion/finance_v1/news/" target="_blank">NEWS</a>
+                <a href="https://ld-wp.template-help.com/wordpress_imperion/finance_v1/shop/" target="_blank">SHOP</a>
+            </nav>
+        </div>
+        <section class="header">
+            <div class="title">
+                <h1>The Power</h1>
+                <h2>OF IMAGINATION MAKES US INFINITE</h2>
+                <p><span>←</span> &nbsp;&nbsp;&nbsp;&nbsp; 01 / 03 &nbsp;&nbsp;&nbsp;&nbsp;<span> →</span></p>
+            </div>
+            <div class="item-group">
+                <section class="item">
+                    <div class="item-title">
+                        <i class="fas fa-globe"></i>
+                        <h3>DEVELOPMENT</h3>
+                    </div>
+                    <p>We work alongside national and international organizations.</p>
+                </section>
+                <section class="item">
+                    <div class="item-title">
+                        <i class="fas fa-atom"></i>
+                        <h3>INTEGRATION</h3>
+                    </div>
+                    <p>Committed to conducting its business according to the highest...</p>
+                </section>
+                <section class="item">
+                    <div class="item-title">
+                        <i class="far fa-gem"></i>
+                        <h3>RESPONSIBILITY</h3>
+                    </div>
+                    <p>Responsible customer relations through clear communication...</p>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <section class="introduce">
+        <div class="wrap">
+            <div class="title">
+                <h2>Looking for a First-Class Business Plan</h2>
+            </div>
+            <div class="text">
+                <p>
+                    We’re a financial and consulting business company of professional thinkers, strategists, digital
+                    innovators, designers and problem solvers (everyone gets a mention). Our sense of curiosity brings
+                    thinkers, strategists, digital innovators, designers and problem solvers (everyone gets a mention).
+                    Our
+                    sense of curiosity brings brands to life, gets them talking, and makes sure they’re heard above.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="Unleash">
+        <div class="wrap">
+            <div class="title">
+                <h2>Unleash Your Team's Productive Power</h2>
+                <p>The truly scarce now are the time,the talent,and the energy of the people.</p>
+            </div>
+            <div class="link">
+                <a href="http://wptemplatetesting.com/floyd/imperion/events/" title="開新視窗" target="_blank">GET IN
+                    TOUCH</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="traders">
+        <div class="title twoColor">
+            <h2>Why Traders <span>Choose Us</span></h2>
+        </div>
+        <p>With a community of over 400 million users (and a majority age group being 18 to 29), wouldn’t you want to
+            make sure you’re monitoring what people are posting on social networks? Especially if the demographic of
+            your audience falls in that age range.</p>
+    </section>
+
+    <div class="phoneArea">
+        <section class="left">
+            <section class="item">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="text">
+                    <h3>VISIT</h3>
+                    <p>Our values and ideals are our decision making guide.</p>
+                </div>
+            </section>
+            <section class="item">
+                <div class="icon">
+                    <i class="fas fa-cloud-download-alt"></i>
+                </div>
+                <div class="text">
+                    <h3>SAVE</h3>
+                    <p>We only release our products when we feel they meet our standards.</p>
+                </div>
+            </section>
+            <section class="item">
+                <div class="icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="text">
+                    <h3>EXPLORE</h3>
+                    <p>We rely on the same platform and tools our customers pay us for</p>
+                </div>
+            </section>
+        </section>
+        <div class="middle">
+            <img src="/asset/asset 1.png" alt="PhonePic" title="IMPERION finacial services">
+        </div>
+        <section class="right">
+            <section class="item">
+                <div class="icon">
+                    <i class="far fa-clone"></i>
+                </div>
+                <div class="text">
+                    <h3>ORGANIZE</h3>
+                    <p>Beautiful products to help people with creative ideas succeed</p>
+                </div>
+            </section>
+            <section class="item">
+                <div class="icon">
+                    <i class="far fa-comments"></i>
+                </div>
+                <div class="text">
+                    <h3>COMMUNICATE</h3>
+                    <p>Creative, stylish, and easy-to-manage online presence.</p>
+                </div>
+            </section>
+            <section class="item">
+                <div class="icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <div class="text">
+                    <h3>SHARE</h3>
+                    <p>Share stories and create an impactful online presence.</p>
+                </div>
+            </section>
+        </section>
+
+    </div>
+
+    <div class="record">
+        <div class="bgColor">
+            <div class="wrap">
+                <section class="item">
+                    <i class="fas fa-history"></i>
+                    <p>2007</p>
+                    <h4>COMPANY ESTABLISHED</h4>
+                </section>
+                <section class="item">
+                    <i class="far fa-folder-open"></i>
+                    <p>426</p>
+                    <h4>PROJECTS DONE</h4>
+                </section>
+                <section class="item">
+                    <i class="fas fa-people-arrows"></i>
+                    <p>45+</p>
+                    <h4>BUSINESS PARTHNERS</h4>
+                </section>
+                <section class="item">
+                    <i class="far fa-heart"></i>
+                    <p>1510</p>
+                    <h4>HAPPY CLIENTS</h4>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <section class="strength">
+        <div class="title twoColor">
+            <h2>What We <span>Are Good At</span></h2>
+        </div>
+        <div class="area">
+            <div class="list">
+                <p>With a community of over 400 million users (and a majority age group being 18 to 29), wouldn’t you
+                    want
+                    to
+                    make sure you’re monitoring what people are posting on social networks? </p>
+                <ul>
+                    <li>Article and News research</li>
+                    <li>Company and Industry Research</li>
+                    <li>Industry Research and Market Research</li>
+                    <li>Market Analysis Report</li>
+                </ul>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="title">
+                        <span>FINANCIAL SERVICES</span>
+                        <span>87%</span>
+                    </div>
+                    <div class="progressBar">
+                        <div class="bottom">
+                            <div class="top p87"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <span>BUSINESS SERVICES</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progressBar">
+                        <div class="bottom">
+                            <div class="top p75"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <span>CONSUMER PRODUCTS </span>
+                        <span>63%</span>
+                    </div>
+                    <div class="progressBar">
+                        <div class="bottom">
+                            <div class="top p63"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <span>ENERGY AND ENVIRONMENT </span>
+                        <span>50%</span>
+                    </div>
+                    <div class="progressBar">
+                        <div class="bottom">
+                            <div class="top p50"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latestProj">
+        <div class="title twoColor">
+            <h2>Our Latest <span>Projects</span></h2>
+        </div>
+        <nav>
+            <a href="javascript:;">ALL</a>
+            <a href="javascript:;">ADVANCED ANALYTICS</a>
+            <a href="javascript:;">CORPORATE FINANCE</a>
+            <a href="javascript:;">DIGITAL</a>
+            <a href="javascript:;">ORGANIZATION</a>
+            <a href="javascript:;">PRIVATE EQUITY</a>
+            <a href="javascript:;">STRATEGY</a>
+            <a href="javascript:;">STRATEGY & MARKETING</a>
+        </nav>
+
+        <div class="wrapCircle">
+            <div class="bigCircle">
+                <div class="smallCircle"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="client">
+        <div class="title twoColor">
+            <h2>Clients <span>Testimonials</span></h2>
+        </div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </section>
+
+    <div class="aboutUs">
+        <section class="leader">
+            <div class="people">
+                <div class="pic">
+                    <img src="/asset/asset 6.jpeg" alt="">
+                </div>
+                <section class="contact">
+                    <h4>CEO,OWNER</h4>
+                    <h3>Sarah Johnson</h3>
+                    <div class="item">
+                        <h5>tel<i class="fas fa-mobile-alt"></i></h5>
+                        <p>+ 800 123 45 70</p>
+                    </div>
+                    <div class="item">
+                        <h5>email<i class="fas fa-envelope"></i></h5>
+                        <p>info@imperion.com</p>
+                    </div>
+                    <div class="item">
+                        <h5>skype<i class="fab fa-skype"></i></h5>
+                        <p>sarah.johnson</p>
+                    </div>
+                </section>
+            </div>
+            <div class="people">
+                <div class="pic">
+                    <img src="/asset/asset 7.jpeg" alt="">
+                </div>
+                <section class="contact">
+                    <h4>Marketing Department</h4>
+                    <h3>Irene Doe</h3>
+                    <section class="item">
+                        <h5>tel<i class="fas fa-mobile-alt"></i></h5>
+                        <p>+ 800 123 45 85</p>
+                    </section>
+                    <section class="item">
+                        <h5>email<i class="fas fa-envelope"></i></h5>
+                        <p>info@imperion.com</p>
+                    </section>
+                    <section class="item">
+                        <h5>skype<i class="fab fa-skype"></i></h5>
+                        <p>irene.doe</p>
+                    </section>
+                </section>
+            </div>
+        </section>
+        <section class="office">
+            <div class="title twoColor">
+                <h2>Our <span>Offices</span></h2>
+            </div>
+            <section class="item-group">
+
+                <section class="item">
+                    <h3>HEAD OFFICE#1</h3>
+                    <h4>address</h4>
+                    <p>4096 N Highland St, Arlington
+                        <br>
+                        VA 32101, USA
+                    </p>
+                    <h4>email</h4>
+                    <p><a href="mailto:imperion@company.com">imperion@company.com</a></p>
+                    <h4>tel</h4>
+                    <p> <a href="tel:80012345678">800 1234 56 78</a></p>
+                </section>
+
+                <section class="item">
+                    <h3>HEAD OFFICE#2</h3>
+                    <h4>address</h4>
+                    <p>4096 N Highland St, Arlington
+                        <br>
+                        VA 32101, USA
+                    </p>
+                    <h4>email</h4>
+                    <p><a href="mailto:imperion@company.com">imperion@company.com</a></p>
+                    <h4>tel</h4>
+                    <p> <a href="tel:80012345678">800 1234 56 78</a></p>
+                </section>
+
+                <section class="item">
+                    <h3>BUSINESS HOURS</h3>
+                    <h6>Mon-Thu: 9:30 - 21:00</h6>
+                    <h6>Fri: 6:00 - 21:00</h6>
+                    <h6>Sat: 10:00 - 15:00</h6>
+                </section>
+
+                <section class="item">
+                    <h3>BUSINESS HOURS</h3>
+                    <h6>Mon-Thu: 9:30 - 21:00</h6>
+                    <h6>Fri: 6:00 - 21:00</h6>
+                    <h6>Sat: 10:00 - 15:00</h6>
+                </section>
+
+            </section>
+
+
+        </section>
+    </div>
+
+    <section class="subscribe">
+        <div class="wrap">
+            <div class="title">
+                <h2>Stay Always In Touch</h2>
+            </div>
+            <div class="emailSub">
+                <input type="email" name="email" id="" placeholder="Your Email Address" alt="Your Email Address">
+                <button type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Address: 4096 N Highland St, Arlington VA 32101, USA</p>
+        <p>Email: <a href="mailto:imperion@company.com">imperion@company.com</a></p>
+        <p>Phone: <a href="tel:80012345678">800 1234 56 78</a></p>
+
+        <div class="icon-group">
+            <div class="icon">
+
+                <a href="https://www.linkedin.com/company/zemez" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://twitter.com/zemezlab" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/ZEMEZLab/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                </i>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/zemezlab" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <span>&copy; 2021 Imperion.All Right Reserved.</span>
+    </footer>
+
+</body>
+
+</html>
