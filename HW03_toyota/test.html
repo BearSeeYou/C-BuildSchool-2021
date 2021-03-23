@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", serif;
+        }
+
+        .wrap {
+            background-color: rgb(124, 51, 51, 0.5);
+            width: 1200px;
+            padding: 60px;
+            margin: auto;
+            position: relative;
+        }
+
+        .back {
+            background-color: #ccc;
+            /* opacity: 0.5; */
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        /* 圖片寬度700 高度400 */
+        .pic {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+
+        }
+
+        .pic img {
+            box-shadow: 100px -100px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .playbutton {
+            padding: 5px 20px;
+            font-size: 20px;
+            color: #fff;
+            background-color: rgb(192, 6, 6);
+            position: absolute;
+            top: 180px;
+            /*top距離圖片高度的一半，再少一點*/
+            right: -10px;
+        }
+
+        .good {
+            width: 370px;
+            color: #fff;
+            position: absolute;
+            top: -140px;
+            /*title的高度..*/
+            left: -160px;
+        }
+
+        .good .title {
+            display: flex;
+            align-items: flex-end;
+            font-size: 30px;
+            background-color: rgb(192, 6, 6);
+
+        }
+
+        .title .num {
+            text-align: center;
+            font-size: 120px;
+        }
+
+        .num:nth-child(odd) {
+            writing-mode: vertical-rl;
+        }
+
+        .good .content {
+            padding: 20px 10px;
+            line-height: 1.7;
+            background-color: rgb(31, 30, 30);
+        }
+
+        .content * {
+            margin: 0;
+        }
+
+        .content h3 {
+            font-size: 25px;
+        }
+
+        .content p {
+            font-size: 18px;
+        }
+    </style>
+
+    <!-- 革新的部分 -->
+    <style>
+        .evol .box {
+            width: 600px;
+            padding: 15px;
+            background-color: rgb(238, 237, 237);
+            position: relative;
+            left: -150px;
+            top: -30px;
+        }
+
+        .box * {
+            margin: 0;
+        }
+
+        .box .title {
+            margin-bottom: 15px;
+            font-size: 19px;
+            color: rgb(192, 6, 6);
+        }
+
+        .box .point {
+            line-height: 1.7;
+        }
+
+        .point-title {
+            width: 100px;
+            padding: 0 5px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .point li {
+            padding: 5px 15px;
+            font-weight: bold;
+            color: rgb(109, 108, 108);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Toyota五大優勢</h1>
+
+    <div class="wrap">
+        <div class="back">
+            <div class="pic">
+                <img src="https://picsum.photos/700/400/?random=1">
+                <span class="playbutton">
+                    ▶
+                </span>
+                <section class="good">
+                    <div class="title">
+                        <span class="num">01</span>
+                        <h2>操控樂趣</h2>
+                    </div>
+                    <div class="content">
+                        <h3>人人滿意的駕駛體驗</h3>
+                        <p>公園這麼多發言溝通，欣賞各位直到暫無強化試題直播主，衝擊律師提示做出事項，辦理思想基隆到了合作一週。</p>
+                    </div>
+                </section>
+                <section class="evol">
+                    <div class="box">
+                        <!-- <div class="red-border-box"></div> -->
+                        <div class="title">
+                            <h5>因為我們做了這些革新</h5>
+                        </div>
+                        <div class="point">
+                            <div class="point-title">
+                                <h4>低重心設計</h4>
+                            </div>
+                            <li>夫人組圖凱文模型連載位元不了，防止其實服務投資生態，夥伴你。</li>
+                        </div>
+                        <div class="point">
+                            <div class="point-title">
+                                <h4>低重心設計</h4>
+                            </div>
+                            <li>夫人組圖凱文模型連載位元不了，防止其實服務投資生態，夥伴你。</li>
+                        </div>
+                        <div class="point">
+                            <div class="point-title">
+                                <h4>低重心設計</h4>
+                            </div>
+                            <li>夫人組圖凱文模型連載位元不了，防止其實服務投資生態，夥伴你。</li>
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

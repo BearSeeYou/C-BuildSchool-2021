@@ -1,0 +1,253 @@
+
+
+/* 有動畫版本 */
+
+/* 最外面的那幾個父層，還有 h1 的設定 */
+    
+        body {
+            font-family: "Microsoft JhengHei", serif;
+        }
+
+        h1 {
+            font-size: 0;
+        }
+
+        .box {
+            width: 100%;
+            /* background-color: #ccc; */
+        }
+
+        .wrap {
+            background-color: rgba(71, 70, 70, 0.5);
+            width: 1200px;
+            height: 800px;
+            padding-top: 200px;
+            margin: 0 auto 50px;
+        }
+
+        .second-wrap {
+            /* background-color: rgba(24, 109, 212, 0.548); */
+            position: relative;
+            width: 700px;
+            height: 500px;
+            /* margin: auto; */
+            /* overflow: hidden; */
+        }
+
+        .wrap:nth-child(odd) .second-wrap {
+            margin: auto;
+        }
+
+        .wrap:nth-child(even) .second-wrap {
+            margin-left: 100px;
+        }
+    
+/* picArea區(被absolute依賴的父層) */
+    
+        .picArea {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .wrap:nth-child(odd) .picArea {
+            left: 210px;
+            box-shadow: 230px -200px 0 -100px rgb(245, 245, 245, 0);
+        }
+
+        .wrap:nth-child(even) .picArea {
+            right: 210px;
+            box-shadow: 180px -140px 0 -50px rgb(245, 245, 245, 0);
+        }
+    
+/* YouTube的圖示 */
+    
+        .picArea .playbutton {
+            display: inline-block;
+            padding: 5px 20px;
+            font-size: 20px;
+            color: #fff;
+            background-color: rgb(192, 6, 6);
+            position: absolute;
+            top: 45%;
+            /*top距離圖片高度的一半，再少一點*/
+        }
+
+        .wrap:nth-child(odd) .playbutton {
+            right: -10px;
+        }
+
+        .wrap:nth-child(even) .playbutton {
+            left: -10px;
+        }
+    
+/* 特點文字區 */
+    
+        .good {
+            width: 350px;
+            color: #fff;
+            position: absolute;
+            top: -135px;
+            opacity: 0;
+        }
+
+        .wrap:nth-child(odd) .good {
+            left: -350px;
+        }
+
+        .wrap:nth-child(even) .good {
+            right: -450px;
+        }
+
+        .good .title {
+            display: flex;
+            align-items: flex-end;
+            font-size: 30px;
+            background-color: rgb(192, 6, 6);
+        }
+
+        .wrap:nth-child(even) .good .title {
+            flex-direction: row-reverse;
+        }
+
+        .title .num {
+            text-align: center;
+            font-size: 120px;
+        }
+
+        .num {
+            writing-mode: vertical-rl;
+        }
+
+        .good .text {
+            height: 200px;
+            padding: 20px 10px;
+            line-height: 1.7;
+            background-color: rgb(31, 30, 30);
+        }
+
+        .text * {
+            margin: 0;
+        }
+
+        .text h3 {
+            font-size: 25px;
+        }
+
+        .text p {
+            font-size: 20px;
+        }
+    
+/* 革新文字區的外觀部分 */
+    
+        .revol {
+            width: 600px;
+            padding: 20px;
+            background-color: rgb(238, 237, 237);
+            position: absolute;
+            top: 530px;
+            opacity: 0;
+        }
+
+        .wrap:nth-child(odd) .revol {
+            left: -150px;
+        }
+
+        .wrap:nth-child(even) .revol {
+            right: -250px;
+        }
+
+        .revol * {
+            margin: 0;
+        }
+
+        .revol .title {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: rgb(192, 6, 6);
+        }
+
+        .revol .title h5::after {
+            content: "—————————————————";
+            font-size: 22px;
+        }
+
+        .revol .point {
+            line-height: 1.3;
+        }
+
+        .point-title {
+            display: inline-block;
+            padding: 2px 5px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .point li {
+            padding: 5px 15px;
+            font-weight: bold;
+            color: rgb(78, 78, 78);
+            list-style: none;
+        }
+
+        .point li::before {
+            content: "▪";
+            color: red;
+            margin-left: -7px;
+            margin-right: 7px;
+        }
+    
+/* 動畫區 */
+    
+        .wrap {
+            transition: all 0.3s ease;
+        }
+
+        .wrap:hover {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .wrap:nth-child(odd) .picArea {
+            transition: left 1s ease-in, opacity 1s ease-in, box-shadow 1s .3s ease-in
+        }
+
+        .wrap:nth-child(even) .picArea {
+            transition: right 1s ease-in, opacity 1s ease-in, box-shadow 1s .3s ease-in;
+        }
+
+        .wrap:nth-child(odd) .second-wrap:hover .picArea {
+            left: 0px;
+            opacity: 1;
+            box-shadow: 180px -200px 0 -100px rgb(245, 245, 245, 1);
+        }
+
+        .wrap:nth-child(even) .second-wrap:hover .picArea {
+            right: 0px;
+            opacity: 1;
+            box-shadow: 180px -120px 0 -50px rgb(241, 240, 240);
+        }
+
+        .good {
+            transition: all 1s ease-in;
+        }
+
+        .wrap:nth-child(odd) .second-wrap:hover .good {
+            left: -160px;
+            opacity: 1;
+        }
+
+        .wrap:nth-child(even) .second-wrap:hover .good {
+            right: -250px;
+            opacity: 1;
+        }
+
+        .revol {
+            transition: all 1s ease-in;
+        }
+
+        .second-wrap:hover .revol {
+            top: 465px;
+            opacity: 1;
+        }
+    
