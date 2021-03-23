@@ -15,6 +15,9 @@
         .box {
             width: 100%;
             /* background-color: #ccc; */
+            
+            color: rgb(44, 44, 44);
+            font-size: 30px;
         }
 
         .wrap {
@@ -23,6 +26,7 @@
             height: 800px;
             padding-top: 200px;
             margin: 0 auto 50px;
+
         }
 
         .second-wrap {
