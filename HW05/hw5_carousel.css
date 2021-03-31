@@ -178,6 +178,126 @@ nav label:hover {
 .apply-group p:hover {
     background-color: rgb(41, 62, 109)
 }
+
+/*-------------------右邊會出現的，可以填表單的黑色區塊------------------------*/
+#ask-box-check{
+    display: none;
+}
+
+#ask-box-check:checked~.ask-box-back {
+    display: block;
+}
+
+#ask-box-check:checked~.ask-box {
+    /* transform: translateY(0); */
+    left: 73%;
+}
+
+.ask-box-back {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.527);
+    display: none;
+    transition: .3s;
+
+}
+
+
+.ask-box {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 2;
+    width: 27%;
+    height: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Microsoft JhengHei', serif;
+    /* transform: translateY(-200%); */
+    transition: .5s;
+}
+
+.ask-box .wrap {
+    margin: 10px 15px 10px 15px;
+}
+
+.ask-box .title h4{
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: aqua;
+}
+
+.ask-box .content {
+    margin-bottom: 30px;
+}
+
+.content ol {
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.ask-box .fill-form {
+    width: 100%;
+}
+.ask-box .fill-form .text p{
+    margin: 0;
+}
+.ask-box .fill-form .text {
+    margin-bottom: 30px;
+}
+
+.ask-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ask-box input,
+.ask-box textarea {
+    padding: 5px 3px;
+    margin-bottom: 5px;
+    outline: aqua;
+}
+
+.ask-box input {
+    width: 97%;
+    font-size: 16px;
+    caret-color: aqua;
+}
+
+.ask-box input::placeholder {
+    font-size: 14px;
+}
+
+.ask-box textarea {
+    width: 97%;
+}
+
+.ask-box input[type="submit"] {
+    width: 50px;
+    margin-left: 81%;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: rgb(7, 214, 214);
+    border: none;
+}
+
+.close {
+    margin-top: -20px;
+}
+
+.close label {
+    font-size: 55px;
+    color: #fff;
+}
+
+
 /*-------------------------------------------*/
 .container{
     max-width: 1200px;
@@ -404,120 +524,3 @@ font-size: 18px;
     font-size: 14px;
 }
 
-/*-------------------右邊會出現的，可以填表單的黑色區塊------------------------*/
-#ask-box-check{
-    display: none;
-}
-
-#ask-box-check:checked~.ask-box-back {
-    display: block;
-}
-
-#ask-box-check:checked~.ask-box {
-    /* transform: translateY(0); */
-    left: 73%;
-}
-
-.ask-box-back {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(204, 204, 204, 0.527);
-    display: none;
-    transition: .3s;
-
-}
-
-
-.ask-box {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    z-index: 2;
-    width: 27%;
-    height: 100%;
-    padding: 10px 10px;
-    box-sizing: border-box;
-    display: flex;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Microsoft JhengHei', serif;
-    /* transform: translateY(-200%); */
-    transition: .5s;
-}
-
-.ask-box .wrap {
-    margin: 10px 15px 10px 15px;
-}
-
-.ask-box .title h4{
-    margin-bottom: 20px;
-    font-size: 35px;
-    color: aqua;
-}
-
-.ask-box .content {
-    margin-bottom: 30px;
-}
-
-.content ol {
-    padding-left: 20px;
-    line-height: 1.5;
-}
-
-.ask-box .fill-form {
-    width: 100%;
-}
-.ask-box .fill-form .text p{
-    margin: 0;
-}
-.ask-box .fill-form .text {
-    margin-bottom: 30px;
-}
-
-.ask-box a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.ask-box input,
-.ask-box textarea {
-    padding: 5px 3px;
-    margin-bottom: 5px;
-    outline: aqua;
-}
-
-.ask-box input {
-    width: 97%;
-    font-size: 16px;
-    caret-color: aqua;
-}
-
-.ask-box input::placeholder {
-    font-size: 14px;
-}
-
-.ask-box textarea {
-    width: 97%;
-}
-
-.ask-box input[type="submit"] {
-    width: 50px;
-    margin-left: 81%;
-    padding: 5px 10px;
-    color: #fff;
-    background-color: rgb(7, 214, 214);
-    border: none;
-}
-
-.close {
-    margin-top: -20px;
-}
-
-.close label {
-    font-size: 55px;
-    color: #fff;
-}
