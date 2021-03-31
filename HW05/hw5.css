@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+.head-bg-pic{
+    position: relative;
+    width: 100%;
+    padding-bottom: 46.052631%;
+    margin-bottom: 100px;
+}
+
+.head-bg-pic img{
+    position: absolute;
+    width: 100%;
+    height:  100%;
+}
+.head-information{
+    position: absolute;
+    top: 1%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/*------------------第一個區塊 共用區-------------------------*/
+header,.apply-group,.slogan{
+    max-width: 1200px;
+    margin: auto;
+}
+/*-------------------------------------------*/
+header{
+    margin-bottom:120px;
+    /* background-color: #fcc; */
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.logo-group{
+    margin: 0 50px 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.logo-pic img{
+margin:10px;
+width: 55px;
+height: 60px;
+}
+.logo-title{
+    padding-top: 25px;
+    text-align: end;
+}
+.logo-title a{
+    text-decoration: none;
+    color: white;
+}
+.logo-title h1{
+    font-size: 26px;
+    
+}
+.logo-title p{
+    font-size: 12px;
+}
+nav a,nav label{
+    margin: 0 10px;
+    padding: 10px 0;
+    display: inline-block;
+    /* background-color: #aaf; */
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+
+nav a:hover,nav label:hover{
+    color: rgb(107, 152, 248);
+}
+/*-------------------------------------------*/
+.slogan{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    /* background-color: #ccc; */
+}
+.ch-slogan,.en-slogan{
+    /* margin-left: 80px; */
+    font-weight: 500;
+}
+.ch-slogan{
+    width: 350px;
+    font-size: 40px;
+    font-family: 'Noto Sans Tc',serif;
+    text-align: center;
+}
+.en-slogan{
+    width: 450px;
+    font-size: 18px;
+    font-family: 'Roboto Slab',serif;
+    text-align: center;
+}
+/*-------------------------------------------*/
+.apply-group{
+    /* padding-left: 120px; */
+    display: flex;
+}
+.apply-group a{
+    text-decoration: none;
+}
+.apply-group p{
+    max-width:300px;
+    min-width: 200px;
+    margin-left: 120px;
+    padding: 10px 10px;
+    background-color: #3D9BE999;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    transition: .3s;
+}
+
+.apply-group p:hover{
+    background-color:rgb(41, 62, 109)
+}
+
+/*-------------------------------------------*/
+.container{
+    max-width: 1200px;
+}
+.introduction{
+    /* height: 350px; */
+    margin-bottom: 150px;
+}
+.introduction i{
+font-size: 70px;
+position: relative;
+}
+.introduction .fa-desktop::after{
+    content:'/';
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 40px;
+color: rgb(255, 0, 43);
+}
+
+.sub-title p{
+    width: 350px;
+}
+/*---------------藍色長條標題 共用區----------------------------*/
+.schedule>.pic,.tools>.pic,.teacher-exp>.pic{
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.schedule img,.tools img,.teacher-exp .pic img{
+    width: 100%;
+    height: 100%;
+}
+.schedule .title,.tools .title,.teacher-exp .title{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/*-------------------------------------------*/
+.schedule{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.schedule>.pic{
+    height: 120px;
+}
+
+/* 100/1520*100=10.065789 */
+.schedule .pic-layer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-bottom:7.994736%;
+    background-color: rgba(20, 85, 139, 0.856);
+}
+
+.schedule .title h2{
+    line-height: 120px;
+    letter-spacing:3px;
+}
+
+.schedule .card-header p{
+font-size: 18px;
+}
+
+.schedule i{
+    font-size: 100px;
+}
+
+.schedule h3{
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(255, 0, 43);;
+}
+
+.schedule .container img{
+    width: 140px;
+    height: 140px;
+    vertical-align: middle;
+}
+
+/*-------------------------------------------*/
+.tools{
+    width: 100%;
+    margin-bottom: 70px;
+}
+.tools>.pic{
+    height: 150px;    
+}
+
+.tools .pic-layer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-bottom:9.968421%;
+    background-color: rgba(20, 85, 139, 0.856);
+}
+.tools .title h2{
+    margin-top: 45px;
+    line-height: 35px;
+    letter-spacing: 3px;
+}
+.tools .pic-group{
+    box-sizing: border-box;
+    height:220px;
+}
+.tools .pic-group .pic.sql{
+    width: 55px;
+    height: 75px;
+}
+.tools .pic-group .pic.git-cat{
+    width: 120px;
+    height: 100px;
+}
+.tools .pic-group .pic.trello{
+    width: 140px;
+    height: 44px;
+}
+.tools .pic-group .pic.git{
+    width: 140px;
+    height: 58px;
+}
+.tools .pic-group .pic.vstudio{
+    width: 140px;
+    height: 75px;
+}
+.tools .pic-group .pic.slack{
+    width: 163px;
+    height: 70px;
+}
+.tools .pic-group .pic.azure{
+    width: 176px;
+    height: 51px;
+}
+.tools .pic-group .pic.mteams{
+    width: 210px;
+    height: 50px;
+}
+
+.tools h3{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*-------------------------------------------*/
+
+.teacher-exp{
+    width: 100%;
+    margin-bottom: 70px;
+}
+.teacher-exp>.pic{
+    height: 120px;
+}
+
+.teacher-exp .pic-layer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-bottom:7.994736%; /* 120/1520*100 得到的數值再加個0.1*/
+    background-color: rgba(20, 85, 139, 0.856);
+}
+
+.teacher-exp .title h2{
+    line-height: 120px;
+    letter-spacing: 3px;
+}
+.teacher-exp .card{
+    height: 180px;
+}
+.teacher-exp .card img{
+    width: 185px;
+    height: 55px;
+}
+.teacher-exp .card img[alt*='kerry']{
+    width: 160px;
+    height: 50px;
+}
+.teacher-exp .card img[alt*='gamania']{
+    width: 95px;
+    height: 65px;
+}
+.teacher-exp .card img[alt*='skilltree']{
+    width: 200px;
+    height: 60px;
+}
+.teacher-exp .card img[alt*='leopard']{
+    width: 120px;
+    height: 70px;
+}
+
+/*------------------footer-------------------------*/
+.our-information{
+    background-color: rgb(231, 231, 231);
+    border-top: 5px solid rgb(65, 64, 64);
+}
+.our-information .row{
+    max-width: 1200px;
+    margin: auto;
+}
+.contact p,.contact address,.copyright{
+    margin: 0;
+    font-family: Montserrat,serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.link-group a{
+    padding: 5px;
+    text-decoration: none;
+}
+.link-group a img{
+    width: 28px;
+    height: 28px;
+}
+.link-group .privacy{
+    text-decoration: underline;
+    color: rgb(44, 43, 43);
+    font-size: 14px;
+}
+
+/*-------------------右邊會出現的，可以填表單的黑色區塊------------------------*/
+#ask-box-check{
+    display: none;
+}
+
+#ask-box-check:checked~.ask-box-back {
+    display: block;
+}
+
+#ask-box-check:checked~.ask-box {
+    /* transform: translateY(0); */
+    left: 73%;
+}
+
+.ask-box-back {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.527);
+    display: none;
+    transition: .3s;
+
+}
+
+
+.ask-box {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 27%;
+    height: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Microsoft JhengHei', serif;
+    /* transform: translateY(-200%); */
+    transition: .5s;
+}
+
+.ask-box .wrap {
+    margin: 10px 15px 10px 15px;
+}
+
+.ask-box .title h4{
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: aqua;
+}
+
+.ask-box .content {
+    margin-bottom: 30px;
+}
+
+.content ol {
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.ask-box .fill-form {
+    width: 100%;
+}
+.ask-box .fill-form .text p{
+    margin: 0;
+}
+.ask-box .fill-form .text {
+    margin-bottom: 30px;
+}
+
+.ask-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ask-box input,
+.ask-box textarea {
+    padding: 5px 3px;
+    margin-bottom: 5px;
+    outline: aqua;
+}
+
+.ask-box input {
+    width: 97%;
+    font-size: 16px;
+    caret-color: aqua;
+}
+
+.ask-box input::placeholder {
+    font-size: 14px;
+}
+
+.ask-box textarea {
+    width: 97%;
+}
+
+.ask-box input[type="submit"] {
+    width: 50px;
+    margin-left: 81%;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: rgb(7, 214, 214);
+    border: none;
+}
+
+.close {
+    margin-top: -20px;
+}
+
+.close label {
+    font-size: 55px;
+    color: #fff;
+}
