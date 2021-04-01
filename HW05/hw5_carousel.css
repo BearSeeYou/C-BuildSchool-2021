@@ -356,7 +356,9 @@ color: rgb(255, 0, 43);
     position: absolute;
     top: 0;
     width: 100%;
-    padding-bottom:7.994736%;
+    /* height:7.994736%;
+     */
+     height: 120px;
     background-color: rgba(20, 85, 139, 0.856);
 }
 
@@ -398,7 +400,8 @@ font-size: 18px;
     position: absolute;
     top: 0;
     width: 100%;
-    padding-bottom:9.968421%;
+    /* padding-bottom:9.968421%; */
+    height: 150px;
     background-color: rgba(20, 85, 139, 0.856);
 }
 .tools .title h2{
@@ -452,7 +455,7 @@ font-size: 18px;
 
 .teacher-exp{
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 .teacher-exp>.pic{
     height: 120px;
@@ -462,7 +465,9 @@ font-size: 18px;
     position: absolute;
     top: 0;
     width: 100%;
-    padding-bottom:7.994736%; /* 120/1520*100 得到的數值再加個0.1*/
+    /* padding-bottom:7.994736%; */
+    /* 120/1520*100 得到的數值再加個0.1*/
+    height: 120px;
     background-color: rgba(20, 85, 139, 0.856);
 }
 
