@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>台灣水庫即時水情Dynamic DOM Table - ReservoirTable</h1>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let Reservoir = [
+            { name: "新山水庫(基隆)", capacity: "896.58萬立方公尺", percent: "89.4 %", days: "----" },
+            { name: "翡翠水庫(台北、新北)", capacity: "26388.67萬立方公尺", percent: "78.6 %", days: "60天以上" },
+            { name: "石門水庫(新北、桃園、新竹)", capacity: "6782.62萬立方公尺", percent: "34.3 %", days: "60天以上" },
+            { name: "永和山水庫(新竹、苗栗)", capacity: "242.26萬立方公尺", percent: "8.1 %", days: "30天-60天" },
+            { name: "寶山水庫(新竹)", capacity: "242.26萬立方公尺", percent: "18.7 %", days: "60天以上" },
+            { name: "寶山第二水庫(新竹)", capacity: "288.76萬立方公尺", percent: "9.2 %", days: "60天以上" },
+            { name: "明德水庫(苗栗)", capacity: "131.65萬立方公尺", percent: "10.7 %", days: "60天以上" },
+            { name: "鯉魚潭水庫(苗栗、台中)", capacity: "1113.64萬立方公尺", percent: "9.7 %", days: "30天-60天" },
+            { name: "德基水庫(台中)", capacity: "991.78萬立方公尺", percent: "5.3 %", days: "28天" },
+            { name: "石岡壩(台中", capacity: "46.76萬立方公尺", percent: "31.3 %", days: "9天" },
+            { name: "日月潭水庫(南投)", capacity: "4613.74萬立方公尺", percent: "36 %", days: "60天以上" },
+            { name: "霧社水庫(南投)", capacity: "632.26萬立方公尺", percent: "16.8 %", days: "----" },
+            { name: "湖山水庫(雲林、彰化、嘉義)", capacity: "2146.23萬立方公尺", percent: "42.1 %", days: "60天以上" },
+            { name: "仁義潭水庫(嘉義)", capacity: "666.50萬立方公尺", percent: "26.3 %", days: "60天以上" },
+            { name: "蘭潭水庫(嘉義)", capacity: "625.37萬立方公尺", percent: "67.7 %", days: "60天以上" },
+            { name: "白河水庫(台南)", capacity: "0.00萬立方公尺", percent: "0%", days: "0天" },
+            { name: "曾文水庫(嘉義、台南)", capacity: "5870.00萬立方公尺", percent: "11.5%", days: "0天" },
+            { name: "烏山頭水庫(台南)", capacity: "3703.00萬立方公尺", percent: "47%", days: "30天-60天" },
+            { name: "南化水庫(台南、高雄)", capacity: "3012.55萬立方公尺", percent: "33.1%", days: "60天以上" },
+            { name: "阿公店水庫(高雄)", capacity: "411.00萬立方公尺", percent: "26.9%", days: "30天-60天" },
+            { name: "牡丹水庫(屏東)", capacity: "1279.00萬立方公尺", percent: "48.2%", days: "60天以上" },
+        ];
+
+        let thead, tbody;
+
+        window.onload = function () {
+            thead = document.querySelector("table>thead");
+            tbody = document.querySelector("table>tbody");
+
+            //thead
+            let tr = document.createElement("tr");
+
+            let col01 = document.createElement("th");
+            col01.innerText = "項目";
+            let col02 = document.createElement("th");
+            col02.innerText = "水庫名稱";
+            let col03 = document.createElement("th");
+            col03.innerText = "有效蓄水量";
+            let col04 = document.createElement("th");
+            col04.innerText = "剩餘百分比";
+            let col05 = document.createElement("th");
+            col05.innerText = "預測剩餘天數";
+
+            tr.appendChild(col01);
+            tr.appendChild(col02);
+            tr.appendChild(col03);
+            tr.appendChild(col04);
+            tr.appendChild(col05);
+
+            thead.appendChild(tr);
+
+            //tbody
+            Reservoir.forEach((item, index) => {
+                let tr = document.createElement("tr");
+                let col_index = document.createElement("td");
+
+                col_index.innerText = index + 1;
+                tr.appendChild(col_index);
+
+                let values = Object.values(item);
+                values.forEach((value, index) => {
+                    let col_content = document.createElement("td");
+                    col_content.innerText = value;
+                    tr.appendChild(col_content);
+                })
+
+                tbody.appendChild(tr);
+            })
+
+        }
+    </script>
+</body>
+
+</html>
