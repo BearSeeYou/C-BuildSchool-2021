@@ -44,12 +44,9 @@
 
         xhr_position.onload = function () {
             tw_position = JSON.parse(this.responseText);
-
         };
         xhr_position.open('GET', url_tw_position);
         xhr_position.send();
-
-
 
         let xhr_water = new XMLHttpRequest();
         let tw_water = [];
@@ -85,25 +82,7 @@
                     animation: google.maps.Animation.DROP
                 })
                 // }, index * 500);
-
-                // tw_water.find(function (item, index) {
-                //     if ((item.County == pitem.City) && (item.Town == pitem.District)) {
-                //         console.log(`${item.County},${item.Town},${item.Year},${item.Month}`);
-                //     };
-                // });
-                // console.log(`${index}: ${tw_water.filter(x => (x.County == item.City) && (x.Town == item.District))}`);
-
             });
-
-            // let contentString = `${Year}年 ${Month}月 每人的平均每日生活用水量：`;
-
-            // let infowindow = []; new.google.maps.infowindow({
-            //     content: contentString,
-            // })
-
-
-
-
         }
     </script>
 </body>
