@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBRAqrqqrKac2n_OfLrni31HfZuDgXJfM&callback=initMap&libraries=&v=weekly"
+        async></script>
+    <script>
+        let map;
+        const CHU = { lat: 24.759749216005577, lng: 120.95285981821233 };
+        const url_tw_position = "https://raw.githubusercontent.com/taihochan/JsonData/main/%E5%8F%B0%E7%81%A3%E8%A1%8C%E6%94%BF%E5%9C%B0%E5%8D%80.json";
+        const url_tw_water = "https://raw.githubusercontent.com/taihochan/JsonData/main/%E5%8F%B0%E7%81%A3%E8%87%AA%E4%BE%86%E6%B0%B4%E7%94%A8%E9%87%8F.json";
+
+
+        let xhr_position = new XMLHttpRequest();
+        let tw_position = [];
+
+        xhr_position.onload = function () {
+            tw_position = JSON.parse(this.responseText);
+
+        };
+        xhr_position.open('GET', url_tw_position);
+        xhr_position.send();
+
+
+
+        let xhr_water = new XMLHttpRequest();
+        let tw_water = [];
+
+        xhr_water.onload = function () {
+            tw_water = JSON.parse(this.responseText);
+            tw_water = tw_water.TaiwanWaterExchangingData.StatisticofWaterResourcesClass.StatisticofWaterUsageClass.TheConsumptionOfWater;
+            // console.log(tw_water);
+        };
+        xhr_water.open('GET', url_tw_water);
+        xhr_water.send();
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: CHU, //中心點
+                zoom: 8, //縮放比例
+            });
+
+            const marker = new google.maps.Marker({
+                position: CHU, //marker的位置
+                map: map,
+                label: 'CHU',
+                animation: google.maps.Animation.DROP
+            });
+
+            let tw_marker = [];
+            tw_position.forEach((pitem, index) => {
+                // setTimeout(() => {
+                tw_marker[index] = new google.maps.Marker({
+                    position: { lat: pitem.Lat, lng: pitem.Lng },
+                    map: map,
+                    title: `${pitem.City},${pitem.District}`,
+                    animation: google.maps.Animation.DROP
+                })
+                // }, index * 500);
+
+                // tw_water.find(function (item, index) {
+                //     if ((item.County == pitem.City) && (item.Town == pitem.District)) {
+                //         console.log(`${item.County},${item.Town},${item.Year},${item.Month}`);
+                //     };
+                // });
+                // console.log(`${index}: ${tw_water.filter(x => (x.County == item.City) && (x.Town == item.District))}`);
+
+            });
+
+            // let contentString = `${Year}年 ${Month}月 每人的平均每日生活用水量：`;
+
+            // let infowindow = []; new.google.maps.infowindow({
+            //     content: contentString,
+            // })
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
