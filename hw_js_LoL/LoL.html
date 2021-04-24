@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        .card {
+            border: 1px solid black;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .headshot {
+            overflow: hidden;
+        }
+
+        .card-title {
+            color: white;
+            background-color: black;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px 15px 5px 15px;
+        }
+
+        .card-body {
+            background-color: #ffbf67;
+        }
+
+        .card:hover {
+            box-shadow: 8px 8px 15px #808080;
+            transform: translate(5px, 5px);
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+            transition: transform 0.5s;
+        }
+
+        .card:not(:hover) img {
+            transform: scale(1, 1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-body {
+            background-color: lightgreen !important;
+        }
+
+        .card:hover .card-title {
+            color: black;
+            background-color: white !important;
+        }
+
+        #exampleModal .modal-body img {
+            width: 100%;
+        }
+
+        #videoModal .modal-body .wrap {
+            width: 100%;
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+
+
+        #videoModal .modal-body iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container-fluid'>
+        <div class='jumbotron bg-info'>
+            <h1>LoL Card Template</h1>
+        </div>
+
+        <div class='row justify-content-center'>
+
+        </div>
+    </div>
+
+    <template id='cardLoL'>
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">詳細說明</a>
+                <a href="#" class="btn btn-danger">影片觀看</a>
+            </div>
+        </div>
+    </template>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id='LoLImage' src="" alt="">
+                    <!-- <p id='description' class="text-primary"></p> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VideoModal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrap">
+                        <iframe src="" frameborder="0" allow="autoplay; " allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+    <script type='module'>
+        import { $g } from '../modules/helpers.js';
+        let LOLArrayJson = [];
+        let url = "https://ddragon.leagueoflegends.com/cdn/10.22.1/data/zh_TW/champion.json";
+        fetch(url)
+            .then(response => response.text())
+            .then(result => { LOLArrayJson = Object.values(JSON.parse(result).data); })
+            .catch(ex => { alert(ex) })
+            .finally();
+
+        let row = $g('.row');
+
+        // console.log(row);
+        window.onload = function () {
+
+            let card = $g('#cardLoL');
+            let modalVideo = document.getElementById('videoModal');
+
+            // 動態載入卡片
+            LOLArrayJson.forEach((item, index) => {
+                let cloneContent = card.content.cloneNode(true);
+                let nameTitle = item.id + '-' + item.name;
+                cloneContent.querySelector('h5').innerText = nameTitle;
+                cloneContent.querySelector('img').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item.id}_0.jpg`;
+                cloneContent.querySelector('p').innerText = item.blurb.substr(0, 25) + "...";
+
+
+                //詳細說明的Modal
+                let desButton = cloneContent.querySelector('.btn-primary');
+                desButton.addEventListener('click', function () {
+
+                    // 當按鈕被click，觸發Modal跳出來
+                    desButton.setAttribute('data-toggle', 'modal');
+                    desButton.setAttribute('data-target', '#exampleModal');
+
+                    //抓Modal，改變 title 和 img
+                    let modal = document.getElementById('exampleModal');
+                    modal.querySelector('h5').innerText = nameTitle;
+                    modal.querySelector('#LoLImage').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item.id}_0.jpg`;
+
+                    //隨意抓了5個數值，並存為一個陣列。
+                    let stats = item.stats;
+                    let statsArray = [{ "hp": stats.hp }, { "movespeed": stats.movespeed }, { "armor": stats.armor }, { "spellblock": stats.spellblock }, { "attackrange": stats.attackrange }];
+
+                    //modal-body部分
+                    let modalBody = modal.querySelector(".modal-body");
+
+                    //需要知道modal-body裡面有沒有先前append的 <p>
+                    let oldP = modalBody.querySelectorAll('p');
+                    console.log(oldP);
+
+                    //載入 5個數值 的部分
+                    statsArray.forEach((stat, index) => {
+
+                        ///方式 1：
+                        let p = document.createElement('p');
+                        p.innerText = `${Object.keys(stat)[0]} : ${Object.values(stat)[0]}`;
+                        p.setAttribute('class', 'text-primary');
+
+                        // 如果 length != 0,表示modal-body已存在上一次的<p>，因此用replaceWith來替換掉之前的<p>
+                        if (oldP.length != 0) {
+                            oldP[index].replaceWith(p);
+                        }
+                        //如果 length == 0，表示modal-body裡面完全沒有<p>，因此用 append(p)
+                        else {
+                            modalBody.append(p);
+                        }
+
+
+                        /////方式 2：
+                        // //已存在<p>的話，直接用index，一個個把innerText替換掉。
+                        // if (oldP.length != 0) {
+                        //     oldP[index].innerText = `${Object.keys(stat)[0]} : ${Object.values(stat)[0]}`;;
+                        // }
+                        // //不存在<p>的話，就新增element，並append進去。
+                        // else {
+                        //     let p = document.createElement('p');
+                        //     p.innerText = `${Object.keys(stat)[0]} : ${Object.values(stat)[0]}`;
+                        //     p.setAttribute('class', 'text-primary');
+                        //     modalBody.append(p);
+                        // }
+
+                    })
+                })
+
+
+                //為了根據點到的英雄播影片，要抓key。
+                // （我去官網開檢查工具，看到不同英雄video的差異就那一個key而已，然後我沒打算放全部技能影片，所以就是抓key而已。）
+                let key = item.key.padStart(4, '0');
+
+                //看影片的Modal
+                let videoButton = cloneContent.querySelector('.btn-danger');
+                videoButton.addEventListener('click', function () {
+                    videoButton.setAttribute('data-toggle', 'modal');
+                    videoButton.setAttribute('data-target', '#videoModal');
+
+                    modalVideo.querySelector('h5').innerText = nameTitle;
+
+                    modalVideo.querySelector('iframe').src = `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${key}/ability_${key}_E1.mp4`
+
+                    //暫停影片播放function
+                    function pauseVideo() {
+                        modalVideo.querySelector('iframe').src = "";
+                    }
+
+                    //點擊離開按鈕後，會觸發pauseVideo
+                    let xExit = modalVideo.querySelector('button.close');
+                    xExit.addEventListener('click', pauseVideo);
+
+                    let closeButton = modalVideo.querySelector('.modal-footer button.btn-secondary');
+                    closeButton.addEventListener('click', pauseVideo);
+
+                })
+
+                row.append(cloneContent);
+            })
+        }
+
+    </script>
+</body>
+
+</html>
